@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "ViewCurrentBook";
+}
+
+<script src="~/Scripts/Info.js"></script>
+<h2 id="h2">ViewCurrentBook</h2>
+    <li>@Model.Name</li>
+    <li>@Model.Author</li>
+    <li>@Model.Genre</li>
+    <li>@Model.Type</li>
+    <li>@Model.PageCount</li>
+    <li>@Model.Cost</li>
+    <li>@Model.Description</li>
+<input type="hidden" name="Userid" value=@Model.UserId id="UserId">
+<input type="button" name="Info" id="Info" value="Show" >
+
+<div id="results"></div>
+@if (User.Identity.IsAuthenticated)
+{
+    <form action="/Book/BuyBook" method="post">
+        <input type="hidden" name="Id" value="@Model.Id"/>
+        <input type="submit" value="Купить"/>
+    </form>
+}
+    @Html.ActionLink("Back to List", "Index", "Home")
+
+

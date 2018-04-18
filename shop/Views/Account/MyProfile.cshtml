@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "MyProfile";
+}
+
+<h2>MyProfile</h2>
+<li>@Model.LastName</li>
+<li>@Model.FirstName</li>
+<li>@Model.MiddleName</li>
+<li>@Model.Address</li>
+<li>@Model.Number</li>
+<form action="/Account/UpdateUser" method="get">
+    <input type="hidden" name="Id" value="@Model.Id"/>
+    <input type="submit" value="Редактировать пользователя"/>
+</form>
+

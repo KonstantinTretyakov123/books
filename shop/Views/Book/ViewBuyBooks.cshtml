@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "ViewBuyCars";
+}
+
+<h2>ViewBuyCars</h2>
+<table>
+    <tr>
+        <th>Название</th>
+        <th>Автор</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.Author</td>
+        <td>
+            <form action="/Book/DeletePurchase" method="get">
+                <input type="hidden" name="Id" value="@item.Id" />
+                <input type="submit" value="Отменить покупку" />
+            </form>
+        </td>
+    </tr>
+
+    }
+
+</table>

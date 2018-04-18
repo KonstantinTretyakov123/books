@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "UpdateBook";
+}
+
+<h2>UpdateCar</h2>
+<form action="/Book/ChangeBook" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="hidden" name="UserId" value="@Model.UserId" />
+    <input type="text" name="Name" value="@Model.Name" />
+    <input type="text" name="Author" value="@Model.Author" />
+    <input type="number" name="PageCount" value="@Model.PageCount" />
+    <input type="text" name="Genre" value="@Model.Genre" />
+    <input type="text" name="Type" value="@Model.Type" />
+    <input type="number" name="Cost" value="@Model.Cost" />
+    <input type="text" name="Description" value="@Model.Description" />
+    <input type="submit" value="Редактировать" />
+</form>
