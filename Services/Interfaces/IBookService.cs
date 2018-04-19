@@ -15,6 +15,7 @@ namespace Services.Interfaces
         Book FindById(Guid id);
         IEnumerable<Book> GetUserBooks(Guid id);
         IEnumerable<Book> GetSortedBooks(string value);
+        IEnumerable<Book> GetFilteredBooks(string value);
         IEnumerable<Book> GetBuyerBooks(Guid id);
         void UpdateBook(Book book);
     }

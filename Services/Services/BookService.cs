@@ -74,6 +74,18 @@ namespace Services.Services
             return books;
         }
 
+        public IEnumerable<Book> GetFilteredBooks(string value)
+        {
+            if (value == "All")
+            {
+                return _bookRepository.GetAll();
+            }
+          
+                return _bookRepository.GetAll()
+                    .Where(u => u.Genre == value);
+            
+        }
+
         public IEnumerable<Book> GetBuyerBooks(Guid id)
         {
             return _bookRepository.GetAll()

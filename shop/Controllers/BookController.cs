@@ -102,6 +102,11 @@ namespace shop.Controllers
         {
             return Json(_bookService.GetSortedBooks(value), JsonRequestBehavior.AllowGet);
         }
+        [HttpGet]
+        public JsonResult FilterBooks(string value)
+        {
+            return Json(_bookService.GetFilteredBooks(value), JsonRequestBehavior.AllowGet);
+        }
 
         public ActionResult DeleteBook(Guid id)
         {

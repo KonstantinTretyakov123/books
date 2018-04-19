@@ -6,6 +6,7 @@
     <link type="text/css" rel="stylesheet" href="../../Content/Index.css" />
 </head>
 <script src="~/Scripts/SortBooks.js"></script>
+<script src="~/Scripts/FilterBooks.js"></script> 
 <table id="table">
     <tr>
         <th>Название</th>
@@ -14,12 +15,19 @@
         <th>Цена</th>
     </tr>
     <p> Сортировать по:</p>
-        <select id="select">
-            <option value="author">Автору</option>
-            <option value="cost">Цене</option>
-        </select>
-        @foreach (var item in Model)
-        {
+    <select id="select">
+        <option value="author">Автору</option>
+        <option value="cost">Цене</option>
+    </select>
+    
+    <p>Жанр:</p>
+    <select id="genre">
+        <option value="All">Все</option>
+        <option value="Романтика">Романтика</option>
+        <option value="Фантастика">Фантастика</option>
+    </select>
+    @foreach (var item in Model)
+    {
         <tr class="model">
             <td> @item.Name</td>
             <td>@item.Author</td>
@@ -32,10 +40,10 @@
                 </form>
             </td>
         </tr>
-             
-        }
-    
-   
-    
+
+    }
+
+
+
 </table>
 
