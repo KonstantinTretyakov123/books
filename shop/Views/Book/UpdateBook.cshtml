@@ -10,8 +10,14 @@
     <input type="text" name="Name" value="@Model.Name" />
     <input type="text" name="Author" value="@Model.Author" />
     <input type="number" name="PageCount" value="@Model.PageCount" />
-    <input type="text" name="Genre" value="@Model.Genre" />
-    <input type="text" name="Type" value="@Model.Type" />
+    <select name="Genre">
+        <option value="Романтика">Романтика</option>
+        <option value="Фантастика">Фантастика</option>
+    </select>
+    <select name="Type">
+        <option value="Твердый переплет">Твердый переплет</option>
+        <option value="Мягкий переплет">Мягкий переплет</option>
+    </select>
     <input type="number" name="Cost" value="@Model.Cost" />
     <input type="text" name="Description" value="@Model.Description" />
     <input type="submit" value="Редактировать" />

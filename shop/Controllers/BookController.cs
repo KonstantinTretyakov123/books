@@ -27,6 +27,7 @@ namespace shop.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult AddBook()
         {
             return View();

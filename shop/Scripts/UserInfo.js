@@ -6,7 +6,7 @@
         if (show == false) {
             $.ajax({
                 type: "GET",
-                url: "/Car/ViewUserInfo?id=" + id,
+                url: "/Book/ViewUserInfo?id=" + id,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function (data) {
@@ -23,7 +23,7 @@
                         data.Number +
                         "</p>";
                 },
-                error: function(data) {
+                error: function (data) {
                     console.log(data);
                 }
             });
