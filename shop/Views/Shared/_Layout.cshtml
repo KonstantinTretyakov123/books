@@ -17,28 +17,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Bookcrossing", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-            </ul>
+            
             <ul class="nav navbar-nav navbar-right">
                     
                 @if (!User.Identity.IsAuthenticated)
                 {
-                    <li > @Html.ActionLink("Register", "Register", "Account")</li>
-                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    <li > @Html.ActionLink("Регистрация", "Register", "Account")</li>
+                    <li>@Html.ActionLink("Вход в профиль", "Login", "Account")</li>
                 }
                 else
                 {
 
                     <li>@Html.ActionLink(@User.Identity.Name, "MyProfile", "Account")</li>
-                    <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
                     <li>@Html.ActionLink("Мои объявления", "BooksOfCurrentuser", "Book")</li>
-                    <li>@Html.ActionLink("Добавить объявление", "AddBook", "Book")</li>
                     <li>@Html.ActionLink("Покупки", "ViewBuyBooks", "Book")</li>
-
+                    <li>@Html.ActionLink("Добавить объявление", "AddBook", "Book")</li>
+                    <li>@Html.ActionLink("Выход из профиля", "Logout", "Account")</li>
 
                 }
             </ul>

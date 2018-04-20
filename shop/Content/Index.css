@@ -1,5 +1,18 @@
-﻿td, th {
+﻿
+td, th {
     padding: 5px 20px;
     text-align: center;
 }
+#CorrectionFields{
+    display: inline-block;
+    margin-top: 20px;
+}
+#CorrectionFields select{
+     float: left;
+
+ }
+    #CorrectionFields p {
+        float: left;
+        margin: 0 10px 0px 20px;
+    }
 

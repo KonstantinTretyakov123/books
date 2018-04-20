@@ -2,13 +2,16 @@
 @{
     ViewBag.Title = "MyProfile";
 }
-
-<h2>MyProfile</h2>
-<li>@Model.LastName</li>
-<li>@Model.FirstName</li>
-<li>@Model.MiddleName</li>
-<li>@Model.Address</li>
-<li>@Model.Number</li>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/MyProfile.css" />
+</head>
+<h2>Мой профиль</h2>
+<li><p>Фамилия: @Model.LastName</p></li>
+<li><p>Имя: @Model.FirstName</p></li>
+<li><p>Отчество: @Model.MiddleName</p></li>
+<li><p>Адрес проживания: @Model.Address</p></li>
+<li><p>Контактный телефон: @Model.Number</p></li>
 <form action="/Account/UpdateUser" method="get">
     <input type="hidden" name="Id" value="@Model.Id"/>
     <input type="submit" value="Редактировать пользователя"/>

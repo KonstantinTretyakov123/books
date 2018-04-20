@@ -78,11 +78,13 @@ namespace Services.Services
         {
             if (value == "All")
             {
-                return _bookRepository.GetAll();
+                return _bookRepository.GetAll()
+                    .Where(u => u.BuyerId == null);
             }
           
                 return _bookRepository.GetAll()
-                    .Where(u => u.Genre == value);
+                    .Where(u => u.Genre == value)
+                    .Where(u => u.BuyerId == null);
             
         }
 

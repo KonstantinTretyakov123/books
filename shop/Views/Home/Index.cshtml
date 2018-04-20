@@ -14,18 +14,21 @@
         <th>Тип переплета</th>
         <th>Цена</th>
     </tr>
-    <p> Сортировать по:</p>
-    <select id="select">
-        <option value="author">Автору</option>
-        <option value="cost">Цене</option>
-    </select>
-    
-    <p>Жанр:</p>
-    <select id="genre">
-        <option value="All">Все</option>
-        <option value="Романтика">Романтика</option>
-        <option value="Фантастика">Фантастика</option>
-    </select>
+    <div id="CorrectionFields">
+        <p> Сортировка по:</p>
+        <select id="select">
+            <option value="author">Автору</option>
+            <option value="cost">Цене</option>
+        </select>
+
+        <p>Жанр:</p>
+        <select id="genre">
+            <option value="All">Все</option>
+            <option value="Романтика">Романтика</option>
+            <option value="Фантастика">Фантастика</option>
+            <option value="Научная">Научная</option>
+        </select>
+    </div>
     @foreach (var item in Model)
     {
         <tr class="model">

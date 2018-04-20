@@ -3,27 +3,29 @@
 @{
     ViewBag.Title = "ViewCurrentBook";
 }
-
-<script src="~/Scripts/UserInfo.js"></script>
-<h2 id="h2">ViewCurrentBook</h2>
-    <li>@Model.Name</li>
-    <li>@Model.Author</li>
-    <li>@Model.Genre</li>
-    <li>@Model.Type</li>
-    <li>@Model.PageCount</li>
-    <li>@Model.Cost</li>
-    <li>@Model.Description</li>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/CurrentBook.css" />
+</head>
+<script src="~/Scripts/OwnerInfo.js"></script>
+<h2 id="h2">Информация о книге</h2>
+<li><p>Название книги: @Model.Name</p></li>
+    <li><p>Автор: @Model.Author</p></li>
+    <li><p>Жанр: @Model.Genre</p></li>
+    <li><p>Тип переплета: @Model.Type</p></li>
+    <li><p>Кол-во страниц: @Model.PageCount</p></li>
+    <li><p>Цена: @Model.Cost</p></li>
+    <li><p>Краткое описание: @Model.Description</p></li>
 <input type="hidden" name="Userid" value=@Model.UserId id="UserId">
-<input type="button" name="Info" id="Info" value="Show" >
+<input type="button" name="Info" id="Info" value="Владелец книги" >
 
 <div id="results"></div>
 @if (User.Identity.IsAuthenticated)
 {
     <form action="/Book/BuyBook" method="post">
         <input type="hidden" name="Id" value="@Model.Id"/>
-        <input type="submit" value="Купить"/>
+        <input type="submit" value="Бронирование покупки"/>
     </form>
 }
-    @Html.ActionLink("Back to List", "Index", "Home")
 
 

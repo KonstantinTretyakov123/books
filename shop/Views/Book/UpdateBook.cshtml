@@ -2,8 +2,11 @@
 @{
     ViewBag.Title = "UpdateBook";
 }
-
-<h2>UpdateCar</h2>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/UpdateBook.css" />
+</head>
+<h2>Редактирование объявления</h2>
 <form action="/Book/ChangeBook" method="post">
     <input type="hidden" name="Id" value="@Model.Id" />
     <input type="hidden" name="UserId" value="@Model.UserId" />
@@ -19,6 +22,6 @@
         <option value="Мягкий переплет">Мягкий переплет</option>
     </select>
     <input type="number" name="Cost" value="@Model.Cost" />
-    <input type="text" name="Description" value="@Model.Description" />
-    <input type="submit" value="Редактировать" />
+    <textarea name="Description" rows="3" cols="20">@Model.Description</textarea>
+    <input type="submit" id="UpdateBookButton" value="Редактировать" />
 </form>

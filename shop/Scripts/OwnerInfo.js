@@ -11,15 +11,15 @@
                 contentType: "application/json; charset=utf-8",
                 success: function (data) {
                     div.innerHTML =
-                        '<p>' +
+                        '<p>' + "ФИО: " +
                         data.LastName +
                         " " +
                         data.FirstName +
                         " " +
                         data.MiddleName +
-                        "<br>" +
+                        "<br>" + "Адрес: " +
                         data.Address +
-                        " " +
+                        "<br>" + "Контактный телефон: " +
                         data.Number +
                         "</p>";
                 },
